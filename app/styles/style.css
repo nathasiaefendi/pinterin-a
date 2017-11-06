@@ -232,6 +232,10 @@ img.avatar {
    max-height: 50px;
 }
 
+.username-avatar {
+  margin-left: 80%;
+  position: fixed;
+}
 /*navbar*/
 
 .input-search{
@@ -239,6 +243,15 @@ img.avatar {
     border: none;
     width: 500px;
     height: 35px;
+    color: #fff;
+    outline:none;
+}
+.button-search {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
     color: #fff;
 }
 
