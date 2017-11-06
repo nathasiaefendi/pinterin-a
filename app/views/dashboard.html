@@ -1,0 +1,74 @@
+<!-- <div ng-controller="AppCtrl" layout="column" style="height: 500px;" ng-cloak="" class="sidenavdemoCustomSidenav" ng-app="MyApp">
+
+  <section layout="row" flex="">
+
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+      </md-toolbar>
+
+      <md-content layout-margin="">
+        <p>
+          This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
+        </p>
+        <md-button ng-click="toggleLeft()" class="md-accent">
+          Close this Sidenav
+        </md-button>
+      </md-content>
+
+    </md-sidenav>
+
+    <md-content flex="" layout-padding="">
+
+      <div layout="column" layout-align="top center">
+        <p>
+          Developers can also disable the backdrop of the sidenav.<br>
+          This will disable the functionality to click outside to close the sidenav.
+        </p>
+
+        <div>
+          <md-button ng-click="toggleLeft()" class="md-raised">
+            Toggle Sidenav
+          </md-button>
+        </div>
+
+      </div>
+
+    </md-content>
+
+  </section>
+
+</div> -->
+
+
+<div id="mySidenav" class="sidenav">
+  <button class="fa fa-bars" ng-click="opencloseNav()"></button>
+  <a href="#">Dashboard</a>
+  <a href="#">Profile</a>
+  <a href="#">Tables</a>
+  <a href="#">Settings</a>
+</div>
+
+<div>
+<nav class="navbar fixed-top ">
+<a class="navbar-brand" href="#"><img src="images/pinterin-images.png"></a>
+<form class="navbar-form">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<input class="input-search" placeholder="Search" type="text">
+</form>
+ <div class="imgcontainer">
+      <img src="images/avatar-2.png" alt="Avatar" class="avatar">
+  </div>
+</nav>
+</div>
+
+
+<div id="main">
+	<h2>Dashboard HEEEEEEEEEEEEERE</h2>
+</div>
+
+<div id="main">
+  <h2>Sidenav</h2>
+  <span style="font-size:30px;cursor:pointer" ng-click="opencloseNav()">&#9776; open</span>
+</div>
