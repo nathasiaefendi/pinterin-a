@@ -23,4 +23,8 @@ angular.module('pinterinApp')
         $state.go('dashboard');
     };
 
+     $scope.cancelButton = function(){
+        $state.go('landing.home');
+    };
+
   });
