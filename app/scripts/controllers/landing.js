@@ -14,4 +14,14 @@ angular.module('pinterinApp')
       'AngularJS',
       'Karma'
     ];
+
+jQuery(document).ready(function($){
+$( function() {
+  $('.accordion-toggle').click( function(e) {
+  	 e.preventDefault();
+      $(this).toggleClass('on');
+		})
+	})  
+});
+
   });

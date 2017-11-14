@@ -1,5 +1,7 @@
 'use strict';
 
+var env = 'mock';
+
 /**
  * @ngdoc overview
  * @name pinterinApp
@@ -19,6 +21,12 @@ var myApp = angular
     'ngTouch',
     'ui.router'
   ])
+
+  .run(function($rootScope){
+    $rootScope.env = env;
+  })
+
+
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/landing/home');
     $urlRouterProvider.when('/landing', '/landing/home');
