@@ -36,13 +36,13 @@
        return $http(options);
 		};
 
-		// var getToken = function(){
-		// 	return localStorage.getItem('token');
-		// }
+		var getToken = function(){
+			return localStorage.getItem('token');
+		}
 
 		return {
 			loginauth: login,
-			// getToken: getToken,
+			getToken: getToken,
 		};
 	}
 
