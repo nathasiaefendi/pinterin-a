@@ -1,0 +1,17 @@
+image: node:4.2.2
+
+before_script:
+    - apt-get -qq update
+    - npm set progress=false
+    - npm install --silent
+    - npm install -g grunt-cli
+
+deploy:
+    script:
+    - npm run deploy
+    - apt-get install -yqq ruby ruby-dev --silent
+    - gem install dpl
+    - dpl --provider=heroku --app=naya-fe-batch-4 --api key=fb58597e-af70-47fe-8734-8a95c030787b
+    
+    only:
+    - master
