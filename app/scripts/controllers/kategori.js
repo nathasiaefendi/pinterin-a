@@ -1,3 +1,5 @@
+(function(){
+
 'use strict';
 
 /**
@@ -8,27 +10,40 @@
  * Controller of the pinterinApp
  */
 angular.module('pinterinApp')
-  .controller('KategoriCtrl', function ($scope, $state, $http) {
+  .controller('KategoriCtrl', KategoriCtrl);
+
+  KategoriCtrl.$inject = ['$scope', '$state', 'AuthService'];
+
+  function ($scope, $state, $http) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-$scope.getData = function(){
-      $http.get('https://private-anon-e42cb620aa-pinterin.apiary-mock.com/kategori').then(success, error);
+   var promise = KategoriService.getKategori();
 
-       function success(response){
-        console.log(response)
-        $scope.records=response.data.articles;
-      }
+      promise
+      .then(function(response){
+        console.log(response);
 
-      function error(){
-        console.log('error')
-    }
-}
+        var data =response.data.articles;
+
+        console.log(data);
+
+        // if(token){
+        //   localStorage.setItem('token',token);
+        // }
+
+      }) 
+
+
 
      $scope.addKategoriButton = function(){
         $state.go('dashboard.add-kategori');
     };
-  });
+  };
+
+
+})();
+

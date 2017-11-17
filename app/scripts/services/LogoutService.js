@@ -3,34 +3,30 @@
 	// console.log('login service');
 	angular
 	.module('pinterinApp')
-	.factory('AuthService', AuthService);
+	.factory('LogoutService', LogoutService);
 
-	AuthService.$inject = ['$rootScope', '$http'];
+	LogoutService.$inject = ['$rootScope', '$http'];
 
-	function AuthService($rootScope, $http){
+	function LogoutService($rootScope, $http){
 		// console.log('Auth service');
 		var env = $rootScope.env;
 		var baseUrl = 'http://api.pinterin.online';
 
-		var login = function(username, password){
+		var logout = function(){
 
 			if (env == 'mock') {
 				return Promise.resolve({
 					data: {
-						accesstoken: 'DEzNGFiMGYwMDFjMzMxM2YzYzE',
+						accesstoken: ' ',
 					},
 				});
 			}
 			
 		var options= {
         method: 'POST',
-         url: baseUrl + '/login',
+         url: baseUrl + '/logout',
          headers: {
           'content-type': 'application/x-www-form-urlencoded',
-         },
-         data: {
-          username: username,
-          password : password,                                         
          },
        };
 
@@ -42,7 +38,7 @@
 		}
 
 		return {
-			loginauth: login,
+			logout : logout
 			getToken: getToken,
 		};
 	}

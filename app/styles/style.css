@@ -172,7 +172,7 @@ img.avatar {
 }
 
 .margin-left-help{
-  margin-left: 15%;
+  margin-left: 0;
 }
 
 /*card*/
@@ -218,6 +218,9 @@ img.avatar {
   text-align: center;
   font-size: 22px;
   color: #fff;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -318,7 +321,7 @@ img.avatar {
   background: #48466D;
   padding-top: 175px;
   transform: skew(0deg, 7deg);
-  height: 500px;
+/*  height: 500px;*/
   color: #fff;
   margin-top: -325px;
 }
@@ -337,7 +340,7 @@ margin: 0 auto;
 }
 
 a.accordion-toggle.on{
-    color:#000000;
+    color:#009EF6;
     text-align: left;
     display:inline-block;
     font-size: 24px;
@@ -360,6 +363,7 @@ white-space: nowrap;
 }
 
 a.accordion-toggle.collapsed:hover{
+  color: #009EF6;
 text-decoration:underline;}
 .panel-group{
     display:inline-block;

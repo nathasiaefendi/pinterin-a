@@ -31,6 +31,7 @@ function run($rootScope, $state, AuthService) {
 
   var whitelist = [
   'login',
+  'dashboard',
   ];
 
 
